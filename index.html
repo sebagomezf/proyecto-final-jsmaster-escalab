@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteochile</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/icofont.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    
+    <div class="loader-container">
+        <div class="loader">
+            <svg viewBox="0 0 32 32" width="100" height="100">
+                <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+            </svg>
+        </div>
+    </div>
+    
+    
+    <main class="city-weather">
+        
+        <div class="city-weather-container">
+            
+            <section class="city-container">
+                <div class="city-header">
+                    <h2 id="city-name" class="city-header__name">
+                        
+                    </h2>
+                    <p class="city-header__icon-container">
+                        <span id="city-temperature" class="city-header__temperature"></span>
+                        <span class="city-header__degrees ninja">°C</span>
+                        <span id="city-header__icon-container"><i id="city-header__icon" class=""></i></span>
+                        <span class="city-header__description"></span>
+                    </p>
+                </div>
+                <div class="city-overlay"></div>
+            </section>
+            
+            <section class="city-info">
+                <div class="card card-city-select">
+                    <div class="card__header">
+                        <h3 class="card__title">Ciudad</h3>
+                    </div>
+                    <div class="card__body">
+                        <div class="card__select-container">
+                            <select id="city-select" class="card__select">
+                                <option disabled selected>Seleccionar Ciudad</option>
+                                <option value="1">Arica</option>
+                                <option value="2">Iquique</option>
+                                <option value="3">Antofagasta</option>
+                                <option value="4">Copiapó</option>
+                                <option value="5">La Serena</option>
+                                <option value="6">Valparaíso</option>
+                                <option value="7">Santiago</option>
+                                <option value="8">Rancagua</option>
+                                <option value="9">Talca</option>
+                                <option value="10">Chillán</option>
+                                <option value="11">Concepción</option>
+                                <option value="12">Temuco</option>
+                                <option value="13">Valdivia</option>
+                                <option value="14">Puerto Montt</option>
+                                <option value="15">Coyhaique</option>
+                                <option value="16">Punta Arenas</option>
+                            </select>
+                            
+                            <div class="card__select-arrow"></div>
+                        </div>
+                        <div class="card--small__checkbox-container">
+                            <input type="checkbox" id="save-checkbox" name="save-checkbox" value="save">
+                            <label for="save-checkbox"> Guardar el pronóstico de esta ciudad en localStorage</label><br>
+                        </div>
+                    </div>
+                    <div class="card__footer">
+                        
+                        <button class="btn" onclick="updateCityForecast();">Ver Pronóstico</button>
+                    </div>
+                </div>
+                
+                <div class="forecast-cards">
+                    
+                    <div id="forecast-card" class="card card__forecast " >
+                        <div class="card__header">
+                            <h3 class="card__title">Pronóstico</h3>
+                        </div>
+                        <div class="card__body card__body--info">
+                            <p id="forecast__info-text" class="info__text">
+                                Selecciona una ciudad para cargar su pronóstico.
+                            </p>
+                            <ul class="card__list">
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div id="localstorage-card" class="card card__localstorage " >
+                        <div class="card__header card__header--flex ">
+                            <h3 id="localstorage-title" class="card__title">localStorage</h3>
+                            <span class="localStorage-badge ninja">localStorage</span>
+                        </div>
+                        <div class="card__body card__body--info">
+                            
+                            <p id="localstorage__info-text" class="info__text">
+                                Actualmente no hay información almacenada en el localStorage.
+                            </p>
+                            <ul class="card__list localstorage__list">
+                            </ul>
+                        </div>
+                        <div class="card__footer">
+                            <button id="localStorage-button" class="btn btn-secondary" onclick="getFromLocalStorage();" disabled>Cargar Información</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                
+                
+                
+            </section>
+            
+        </div>
+        
+    </main>
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="modal">
+        <button class="modal-close-btn" id="close-btn"><i class="fa fa-times" title="閉じる"></i></button>
+        <p class="modal-text">¿Deseas cargar el pronóstico almacenado en localstorage?</p>
+        <div class="modal-buttons">
+            <button class="btn btn-secondary" onclick="dismissModal()">Cancelar</button>
+            <button class="btn" onclick="getFromLocalStorage();">Cargar localStorage</button>
+        </div>
+    </div>
+    
+    
+    
+    
+    <script src="js/main.js"></script>
+    <script src="js/cities.js"></script>
+    
+</body>
+</html>

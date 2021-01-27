@@ -1,0 +1,17 @@
+const cities = [];
+cities.push(new City(1, "Arica" , "https://storage.googleapis.com/chile-travel-static-content/2018/05/arica.jpg"));
+cities.push(new City(2, "Iquique" , "https://faro.travel/blog/wp-content/uploads/2016/10/iStock_96886211_MEDIUM.jpg"));
+cities.push(new City(3, "Antofagasta" , "https://www.inu.cl/wp-content/uploads/2020/12/recursos-economicos-de-la-region-de-antofagasta.jpg"));
+cities.push(new City(4, "Copiapó" , "https://laruta5.cl/wp-content/uploads/2020/02/copiapo-scaled.jpg"));
+cities.push(new City(5, "La Serena" , "https://storage.googleapis.com/chile-travel-static-content/2016/03/faro-pesca.jpg"));
+cities.push(new City(6, "Valparaíso" , "https://media.elmostrador.cl/2017/02/Valparaiso-1.jpg"));
+cities.push(new City(7, "Santiago" , "https://southjets.com/wp-content/uploads/2019/04/Blog_Post_Chile.jpg"));
+cities.push(new City(8, "Rancagua" , "https://upload.wikimedia.org/wikipedia/commons/a/a9/Plaza_de_Los_H%C3%A9roes.JPG"));
+cities.push(new City(9, "Talca" , "https://breathelife2030.org/wp-content/uploads/2017/03/Horizontal-Talca-Respira-1.jpg.exporting.jpg"));
+cities.push(new City(10, "Chillán" , "https://chillanews.cl/wp-content/uploads/2018/12/chillan-a%C3%A9reo.jpg"));
+cities.push(new City(11, "Concepción" , "https://assets.diarioconcepcion.cl/2017/05/CIUDAD-CONCEPCI%C3%93N-ALTURA-e1506717581714.jpg"));
+cities.push(new City(12, "Temuco" , "https://static11.com-hotel.com/uploads/destination/29221/photo/chile-araucania-temuco_1487697278.jpeg"));
+cities.push(new City(13, "Valdivia" , "https://upload.wikimedia.org/wikipedia/commons/a/ad/Vista_de_Valdivia_%28Puente_PdeV%2C_02a%29.jpg"));
+cities.push(new City(14, "Puerto Montt" , "https://chile.travel/wp-content/uploads/2016/03/Puerto-montt-shutterstock-DST224.jpg"));
+cities.push(new City(15, "Coyhaique" , "https://upload.wikimedia.org/wikipedia/commons/3/36/Vista_panor%C3%A1mica_de_Coyhaique.jpg"));
+cities.push(new City(16, "Punta Arenas" , "https://storage.googleapis.com/lanacion-media-storage/2020/10/d7054a91-foto-punta-arenas-scaled.jpg"));
